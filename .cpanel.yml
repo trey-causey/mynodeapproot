@@ -1,0 +1,8 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/sitejsvh/mynodeapproot/
+    - /bin/cp app.js $DEPLOYPATH
+    - /bin/cp package.json $DEPLOYPATH
+    
+
