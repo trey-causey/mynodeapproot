@@ -7,9 +7,8 @@ let app = express();
 app.get('/', function (req,res) {
     res.writeHead(200, {'Content-Type': 'text/plain'});
     var message = 'It works!\n',
-        version = 'NodeJS ' + process.versions.node + '\n',
-        portnumber = 'NodeJS ' + process.env.port + '\n',
-        response = [message, version, portnumber].join('\n');
+        version = 'NodeJS ' + process.versions.node + ' port: ' + port + '\n',
+        response = [message, version].join('\n');
     res.end(response);
 
 })
