@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "set DEBUG=app & node app.js",
+    "server": "set DEBUG=app & nodemon app.js",
     "lint": "eslint app.js"
   },
   "author": "",
@@ -20,11 +20,21 @@
     "jquery": "^3.5.1",
     "knex": "^0.20.10",
     "morgan": "^1.10.0",
+    "nodemon": "^2.0.4",
     "pg": "^7.18.1"
   },
   "devDependencies": {
     "eslint": "^7.7.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore":["node_modules/**/node_modules"],
+    "delay": "2500",
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 4000
+    }
   }
 }

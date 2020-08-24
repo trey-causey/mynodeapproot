@@ -1,23 +1,23 @@
 //var http = require('http');
-let express = require('express');
-let chalk = require('chalk');
-let debug = require('debug')('app');
-let morgan = require('morgan');
+const express = require("express");
+const chalk = require('chalk');
+const debug = require('debug')('app');
+const morgan = require('morgan');
 const port = process.env.PORT || 3000
 let app = express();
-let path = require('path');
+const path = require('path');
 
 app.use(morgan('tiny'));
 app.use(express.static(path.join(__dirname, '/public/')));
-app.use('/css',express.static(path.join(__dirname,'/node_modules/bootstrap/dist/css')));
-app.use('/js',express.static(path.join(__dirname,'/node_modules/bootstrap/dist/js')));
-app.use('/js',express.static(path.join(__dirname,'/node_modules/jquery/dist')));
+app.use('/css',express.static(path.join(__dirname, '/node_modules/bootstrap/dist/css')));
+app.use('/js',express.static(path.join(__dirname, '/node_modules/bootstrap/dist/js')));
+app.use('/js',express.static(path.join(__dirname, '/node_modules/jquery/dist')));
 
-app.get('/', function (req,res) {
+app.get('/', (req,res) => {
     res.sendFile(path.join(__dirname + '/views/index.html'));
 
 })
-app.listen(port, function () {
+app.listen(port, () => {
     debug(`listening on port ${chalk.green(port)}`);
 });
 
