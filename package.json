@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "set DEBUG=app & nodemon app.js",
+    "server": "set DEBUG=* & nodemon app.js",
     "lint": "eslint app.js"
   },
   "author": "",
@@ -16,9 +16,11 @@
     "bootstrap": "^4.5.2",
     "chalk": "^4.1.0",
     "debug": "^4.1.1",
+    "ejs": "^3.1.5",
     "express": "^4.17.1",
+    "jq": "^1.7.2",
     "jquery": "^3.5.1",
-    "knex": "^0.20.10",
+    "knex": "^0.20.15",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.4",
     "pg": "^7.18.1",
@@ -34,7 +36,7 @@
     "ignore": [
       "node_modules/**/node_modules"
     ],
-    "delay": "2500",
+    "delay": 2500,
     "env": {
       "NODE_ENV": "development",
       "PORT": 4000

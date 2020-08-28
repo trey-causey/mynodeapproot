@@ -1,0 +1,7 @@
+{
+  "main": "test.js",
+  "dependencies": {
+    "node-forge": "0.8.5",
+    "http": "^0.0.1-security"
+  }
+}
